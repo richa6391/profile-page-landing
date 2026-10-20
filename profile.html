@@ -1,0 +1,1190 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f7f8fc">
+<meta name="description" content="Richa Sharma — Product Manager building useful platforms, better workflows, and measurable business outcomes.">
+<title>Richa Sharma — Product Manager</title>
+
+<style>
+:root {
+  --ink: #172033;
+  --muted: #667085;
+  --paper: #f7f8fc;
+  --white: #fff;
+  --line: #e5e8f0;
+  --blue: #2864dc;
+  --blue-soft: #eaf1ff;
+  --green: #167a5a;
+  --green-soft: #e8f6ef;
+  --yellow: #f3b73f;
+  --lilac: #eeeaff;
+  --shadow: 0 18px 55px rgba(24,36,68,.08);
+  --max: 1120px;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 92px;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+
+a:focus-visible {
+  outline: 3px solid #7aa2ff;
+  outline-offset: 4px;
+}
+
+.wrap {
+  width: min(var(--max), calc(100% - 44px));
+  margin-inline: auto;
+}
+
+.nav-wrap {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(247,248,252,.88);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(229,232,240,.8);
+}
+
+nav {
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  font-weight: 800;
+  letter-spacing: -.04em;
+  font-size: 1.12rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-mark {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: var(--blue);
+  color: white;
+  font-size: .9rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 27px;
+  align-items: center;
+  color: #596275;
+  font-size: .9rem;
+  font-weight: 600;
+}
+
+.nav-links a:hover { color: var(--blue); }
+
+.nav-cta, .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border-radius: 999px;
+  padding: 12px 18px;
+  background: var(--ink);
+  color: white;
+  font-size: .9rem;
+  font-weight: 700;
+  transition: transform .2s, background .2s;
+}
+
+.nav-cta:hover, .button:hover {
+  transform: translateY(-2px);
+  background: var(--blue);
+}
+
+.hero { padding: 76px 0 50px; }
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.35fr .75fr;
+  gap: 28px;
+  align-items: stretch;
+}
+
+.hero-main {
+  padding: clamp(28px,5vw,58px);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 32px;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+  color: var(--green);
+}
+
+.dot {
+  height: 8px;
+  width: 8px;
+  background: #27a477;
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px #e6f6ef;
+}
+
+h1 {
+  font-size: clamp(2.8rem,6vw,5.1rem);
+  line-height: .99;
+  letter-spacing: -.075em;
+  margin: 24px 0 20px;
+  max-width: 720px;
+}
+
+h1 .accent { color: var(--blue); }
+
+.hero-copy {
+  font-size: clamp(1.03rem,1.5vw,1.2rem);
+  color: var(--muted);
+  max-width: 600px;
+  margin: 0;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.button.primary { background: var(--blue); }
+.button.primary:hover { background: #174bb4; }
+
+.button.secondary {
+  background: white;
+  color: var(--ink);
+  border: 1px solid var(--line);
+}
+
+.button.secondary:hover {
+  border-color: #b5c8f8;
+  background: var(--blue-soft);
+}
+
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 34px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  font-size: .88rem;
+  color: var(--muted);
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.meta-item svg {
+  width: 16px;
+  height: 16px;
+  color: var(--blue);
+  flex: none;
+}
+
+.hero-side {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.note-card {
+  border-radius: 28px;
+  padding: 27px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.note-card.blue { background: var(--blue-soft); }
+.note-card.green { background: var(--green-soft); }
+
+.note-label {
+  font-size: .76rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-weight: 800;
+  color: #526078;
+}
+
+.note-big {
+  font-size: clamp(2.5rem,4vw,3.6rem);
+  font-weight: 850;
+  letter-spacing: -.075em;
+  line-height: 1;
+  margin: 18px 0 10px;
+}
+
+.note-card p {
+  margin: 0;
+  color: #596579;
+  font-size: .94rem;
+  max-width: 260px;
+}
+
+.note-bottom {
+  margin-top: 26px;
+  font-size: .8rem;
+  color: #667085;
+  font-weight: 650;
+}
+
+section { padding: 55px 0; }
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 24px;
+  margin-bottom: 26px;
+}
+
+.kicker {
+  font-size: .76rem;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: var(--blue);
+  font-weight: 850;
+}
+
+h2 {
+  font-size: clamp(1.9rem,3.4vw,2.8rem);
+  line-height: 1.08;
+  letter-spacing: -.06em;
+  margin: 8px 0 0;
+}
+
+.section-intro {
+  max-width: 390px;
+  color: var(--muted);
+  margin: 0;
+  font-size: .96rem;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 14px;
+}
+
+.stat {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 21px;
+  padding: 24px;
+  min-height: 155px;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  line-height: 1;
+  font-weight: 850;
+  letter-spacing: -.07em;
+  color: var(--blue);
+}
+
+.stat-label {
+  font-weight: 750;
+  margin-top: 15px;
+  line-height: 1.3;
+}
+
+.stat-detail {
+  color: var(--muted);
+  font-size: .82rem;
+  margin-top: 7px;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 18px;
+}
+
+.project {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  padding: 28px;
+  position: relative;
+  overflow: hidden;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.project:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.project-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.project-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 15px;
+  display: grid;
+  place-items: center;
+  font-size: 1.25rem;
+}
+
+.icon-blue { background: var(--blue-soft); }
+.icon-green { background: var(--green-soft); }
+.icon-yellow { background: #fff5d9; }
+.icon-lilac { background: var(--lilac); }
+
+.tag {
+  font-size: .72rem;
+  font-weight: 800;
+  color: #5e687b;
+  background: #f3f5f9;
+  border-radius: 999px;
+  padding: 6px 10px;
+}
+
+.project h3 {
+  font-size: 1.3rem;
+  letter-spacing: -.04em;
+  margin: 22px 0 8px;
+}
+
+.project p {
+  color: var(--muted);
+  margin: 0;
+  font-size: .94rem;
+}
+
+.outcome {
+  margin-top: 22px;
+  padding-top: 17px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.outcome strong {
+  font-size: 1.12rem;
+  color: var(--green);
+  white-space: nowrap;
+  letter-spacing: -.03em;
+}
+
+.outcome span {
+  font-size: .83rem;
+  color: #667085;
+}
+
+.experience-layout {
+  display: grid;
+  grid-template-columns: .72fr 1.28fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.experience-aside {
+  background: var(--ink);
+  color: white;
+  border-radius: 26px;
+  padding: 28px;
+  position: sticky;
+  top: 100px;
+}
+
+.experience-aside h3 {
+  font-size: 1.35rem;
+  line-height: 1.2;
+  letter-spacing: -.04em;
+  margin: 0 0 12px;
+}
+
+.experience-aside p {
+  color: #c5ccda;
+  font-size: .92rem;
+  margin: 0;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 22px;
+}
+
+.skill-list span {
+  font-size: .76rem;
+  color: #e4e9f4;
+  border: 1px solid #465064;
+  border-radius: 999px;
+  padding: 7px 10px;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 26px;
+}
+
+.timeline:before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  bottom: 15px;
+  width: 2px;
+  background: #dce2ef;
+}
+
+.role {
+  position: relative;
+  padding: 0 0 30px 18px;
+}
+
+.role:last-child { padding-bottom: 0; }
+
+.role:before {
+  content: "";
+  position: absolute;
+  left: -26px;
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--blue);
+  border: 4px solid var(--paper);
+  box-sizing: content-box;
+}
+
+.role-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.role h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  letter-spacing: -.035em;
+}
+
+.role-company {
+  font-weight: 750;
+  color: var(--blue);
+  font-size: .9rem;
+  margin-top: 2px;
+}
+
+.role-date {
+  font-size: .78rem;
+  color: var(--muted);
+  white-space: nowrap;
+  padding-top: 4px;
+}
+
+.role p {
+  margin: 11px 0 0;
+  color: var(--muted);
+  font-size: .91rem;
+}
+
+.role ul {
+  padding-left: 18px;
+  margin: 10px 0 0;
+  color: #566174;
+  font-size: .88rem;
+}
+
+.role li { padding: 3px 0; }
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.info-card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 28px;
+}
+
+.info-card h3 {
+  margin: 0 0 18px;
+  font-size: 1.2rem;
+  letter-spacing: -.04em;
+}
+
+.education-item {
+  padding: 15px 0;
+  border-top: 1px solid var(--line);
+}
+
+.education-item:first-of-type {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.education-item strong {
+  display: block;
+  font-size: .96rem;
+}
+
+.education-item span {
+  display: block;
+  color: var(--muted);
+  font-size: .85rem;
+  margin-top: 3px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  padding: 9px 12px;
+  background: #f4f6fb;
+  border: 1px solid #e9ecf3;
+  border-radius: 12px;
+  font-size: .84rem;
+  font-weight: 650;
+  color: #4f5a6e;
+}
+
+.award-list {
+  display: grid;
+  gap: 13px;
+}
+
+.award {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.award-mark {
+  height: 30px;
+  width: 30px;
+  border-radius: 10px;
+  background: #fff5d9;
+  display: grid;
+  place-items: center;
+  flex: none;
+}
+
+.award strong {
+  font-size: .9rem;
+  display: block;
+}
+
+.award span {
+  font-size: .82rem;
+  color: var(--muted);
+  display: block;
+  margin-top: 2px;
+}
+
+.contact { padding: 32px 0 72px; }
+
+.contact-panel {
+  border-radius: 30px;
+  padding: clamp(28px,5vw,52px);
+  background: #eaf1ff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 26px;
+}
+
+.contact-panel h2 { max-width: 560px; }
+
+.contact-panel p {
+  color: #5f6b80;
+  max-width: 560px;
+  margin: 14px 0 0;
+}
+
+.contact-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 190px;
+}
+
+footer {
+  padding: 22px 0 30px;
+  color: var(--muted);
+  font-size: .82rem;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 18px;
+}
+
+.footer-links a:hover { color: var(--blue); }
+
+@media (max-width: 850px) {
+  .nav-links { gap: 15px; }
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-side { display: grid; grid-template-columns: 1fr 1fr; }
+  .stats { grid-template-columns: repeat(2,1fr); }
+  .experience-layout { grid-template-columns: 1fr; }
+  .experience-aside { position: static; }
+  .contact-panel {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .contact-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 600px) {
+  .wrap { width: min(100% - 28px,var(--max)); }
+  nav { height: 66px; }
+  .nav-links { display: none; }
+  .nav-cta { padding: 10px 14px; font-size: .82rem; }
+  .hero { padding: 35px 0 22px; }
+  .hero-main { padding: 28px 23px; border-radius: 25px; }
+  h1 { font-size: 3.15rem; }
+  .hero-side { gap: 10px; }
+  .note-card { padding: 19px; border-radius: 20px; }
+  .note-big { font-size: 2.3rem; }
+  .note-card p { font-size: .82rem; }
+  .note-bottom { font-size: .72rem; margin-top: 18px; }
+  section { padding: 38px 0; }
+  .section-head { display: block; }
+  .section-intro { margin-top: 13px; }
+  .stats { gap: 10px; }
+  .stat { padding: 18px; min-height: 145px; }
+  .stat-number { font-size: 2.1rem; }
+  .projects, .two-col { grid-template-columns: 1fr; }
+  .project { padding: 23px; }
+  .role-head { display: block; }
+  .role-date { display: block; }
+  .experience-aside, .info-card { padding: 23px; }
+  .hero-meta { gap: 12px; }
+  .contact { padding: 25px 0 45px; }
+  .contact-actions { flex-direction: column; width: 100%; }
+  .contact-actions .button { width: 100%; }
+  .footer-inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .footer-links { flex-wrap: wrap; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *:before, *:after { transition: none !important; }
+}
+</style>
+</head>
+
+<body>
+<header class="nav-wrap">
+  <nav class="wrap" aria-label="Main navigation">
+    <a class="brand" href="#home" aria-label="Richa Sharma home">
+      <span class="brand-mark">RS</span> Richa Sharma
+    </a>
+
+    <div class="nav-links">
+      <a href="#work">Selected work</a>
+      <a href="#experience">Experience</a>
+      <a href="#about">About</a>
+    </div>
+
+    <a class="nav-cta" href="#contact">Let's connect <span aria-hidden="true">↗</span></a>
+  </nav>
+</header>
+
+<main id="home">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-main">
+        <div class="eyebrow"><span class="dot"></span> Product leadership · Platforms · Growth</div>
+
+        <h1>I turn complex problems into <span class="accent">useful products.</span></h1>
+
+        <p class="hero-copy">
+          I'm Richa Sharma, a product professional with experience across B2B,
+          B2C, and internal platforms. I bring customer needs, business goals,
+          and technology together to make work simpler—and outcomes measurable.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button primary" href="#work">Explore my work <span aria-hidden="true">↓</span></a>
+          <a class="button secondary" href="mailto:richa6391@gmail.com">Email me <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <div class="hero-meta">
+          <span class="meta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
+              <circle cx="12" cy="10" r="2.5"/>
+            </svg>
+            Jakarta, Indonesia
+          </span>
+
+          <a class="meta-item" href="https://www.linkedin.com/in/richa-sharma-21376a76" target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V8.99h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.26 2.37 4.26 5.45v6.3ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V8.99h3.56v11.46ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0Z"/>
+            </svg>
+            LinkedIn profile ↗
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-side" aria-label="Highlights">
+        <div class="note-card blue">
+          <div>
+            <div class="note-label">Operational impact</div>
+            <div class="note-big">30%+</div>
+            <p>Improvement in sales productivity through workflow automation.</p>
+          </div>
+          <div class="note-bottom">REKOSISTEM · SALES AUTOMATION</div>
+        </div>
+
+        <div class="note-card green">
+          <div>
+            <div class="note-label">Product engagement</div>
+            <div class="note-big">75%</div>
+            <p>Repeat usage achieved through product improvements.</p>
+          </div>
+          <div class="note-bottom">PRODUCT OUTCOME · AS REPORTED IN PROFILE</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="impact">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Impact, not just output</div>
+          <h2>Outcomes that move<br>the business forward.</h2>
+        </div>
+        <p class="section-intro">
+          A few measurable results from work spanning operations,
+          supplier quality, product engagement, and delivery.
+        </p>
+      </div>
+
+      <div class="stats">
+        <article class="stat">
+          <div class="stat-number">30%+</div>
+          <div class="stat-label">Sales productivity</div>
+          <div class="stat-detail">Sales automation and improved data accuracy</div>
+        </article>
+
+        <article class="stat">
+          <div class="stat-number">25%</div>
+          <div class="stat-label">Supplier quality improvement</div>
+          <div class="stat-detail">Supplier evaluation and scoring framework</div>
+        </article>
+
+        <article class="stat">
+          <div class="stat-number">75%</div>
+          <div class="stat-label">Repeat product usage</div>
+          <div class="stat-detail">Product engagement achievement cited in profile</div>
+        </article>
+
+        <article class="stat">
+          <div class="stat-number">95%</div>
+          <div class="stat-label">On-time delivery</div>
+          <div class="stat-detail">Prioritization and proactive dependency management</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Selected work</div>
+          <h2>Making complex workflows<br>feel straightforward.</h2>
+        </div>
+        <p class="section-intro">
+          A selection of product initiatives and the business outcomes
+          they were designed to unlock.
+        </p>
+      </div>
+
+      <div class="projects">
+        <article class="project">
+          <div class="project-top">
+            <div class="project-icon icon-blue" aria-hidden="true">↗</div>
+            <span class="tag">Sales enablement</span>
+          </div>
+          <h3>Sales Automation App</h3>
+          <p>
+            Designed and rolled out a sales app to structure field visits,
+            capture supplier notes, flag prospects, and make follow-ups
+            easier to track.
+          </p>
+          <div class="outcome">
+            <strong>~30%</strong>
+            <span>Improvement in sales productivity through automation and better data accuracy.</span>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-top">
+            <div class="project-icon icon-green" aria-hidden="true">▦</div>
+            <span class="tag">Internal platform</span>
+          </div>
+          <h3>Multi-hub operations platform</h3>
+          <p>
+            Led development of an in-house platform supporting operational
+            workflows across hubs, with a focus on scalability across
+            multiple categories.
+          </p>
+          <div class="outcome">
+            <strong>10 hubs</strong>
+            <span>Platform deployed across operational hubs.</span>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-top">
+            <div class="project-icon icon-yellow" aria-hidden="true">◎</div>
+            <span class="tag">Quality & decision systems</span>
+          </div>
+          <h3>Supplier scoring framework</h3>
+          <p>
+            Introduced a supplier evaluation framework to bring more
+            structure to quality decisions and improve supplier performance.
+          </p>
+          <div class="outcome">
+            <strong>+25%</strong>
+            <span>Supplier quality improvement reported in the profile.</span>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-top">
+            <div class="project-icon icon-lilac" aria-hidden="true">⌁</div>
+            <span class="tag">Analytics & integrations</span>
+          </div>
+          <h3>Configurable analytics dashboards</h3>
+          <p>
+            At Accenture, helped launch configurable dashboards and
+            comparative analytics so teams could access insights with
+            less manual reporting.
+          </p>
+          <div class="outcome">
+            <strong>+20%</strong>
+            <span>Increase in engagement following the dashboard launch.</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Career journey</div>
+          <h2>From building apps<br>to leading products.</h2>
+        </div>
+        <p class="section-intro">
+          A foundation in technology and business analysis, followed by
+          product ownership and portfolio leadership.
+        </p>
+      </div>
+
+      <div class="experience-layout">
+        <aside class="experience-aside">
+          <h3>How I work</h3>
+          <p>
+            I connect user experience, business process, and technical
+            delivery—then use data to understand whether the solution is working.
+          </p>
+          <div class="skill-list">
+            <span>Product strategy</span>
+            <span>Roadmaps & prioritization</span>
+            <span>Workflow automation</span>
+            <span>Platform integrations</span>
+            <span>Agile delivery</span>
+            <span>Analytics</span>
+            <span>Cross-functional leadership</span>
+          </div>
+        </aside>
+
+        <div class="timeline">
+          <article class="role">
+            <div class="role-head">
+              <div>
+                <h3>Senior Product Manager</h3>
+                <div class="role-company">Rekosistem · Jakarta, Indonesia</div>
+              </div>
+              <div class="role-date">Nov 2023 – Dec 2025</div>
+            </div>
+            <p>
+              Owned a portfolio of products across sales, operations,
+              supplier quality, and payments in a climate-tech business.
+            </p>
+            <ul>
+              <li>Led a portfolio of 10 products and rollout of a sales automation app.</li>
+              <li>Scaled an in-house operations platform across 10 hubs.</li>
+              <li>Improved supplier quality by 25% through a scoring framework.</li>
+              <li>Delivered payment integrations with 60%+ adoption of reward withdrawals.</li>
+            </ul>
+          </article>
+
+          <article class="role">
+            <div class="role-head">
+              <div>
+                <h3>Product Owner</h3>
+                <div class="role-company">Accenture</div>
+              </div>
+              <div class="role-date">Dec 2020 – Dec 2023</div>
+            </div>
+            <p>
+              Led backlog prioritization and sprint execution for an
+              enterprise analytics product, aligning releases with business outcomes.
+            </p>
+            <ul>
+              <li>Maintained 95% on-time delivery by managing technical and dependency risks.</li>
+              <li>Launched configurable dashboards and comparative analytics, increasing engagement by 20%.</li>
+              <li>Worked with 10+ developers and domain subject-matter experts; mentored two Business Analysts.</li>
+            </ul>
+          </article>
+
+          <article class="role">
+            <div class="role-head">
+              <div>
+                <h3>Senior Business Analyst</h3>
+                <div class="role-company">Accenture · Bengaluru, India</div>
+              </div>
+              <div class="role-date">Jun 2018 – Nov 2020</div>
+            </div>
+            <p>
+              Translated business needs into product requirements and
+              partnered with cross-functional teams to deliver HR technology initiatives.
+            </p>
+            <ul>
+              <li>Automated interview scheduling and offer-letter workflows, reducing manual effort by 50%.</li>
+              <li>Led integrations with two external vendors for online interviews.</li>
+              <li>Contributed to a Talent Search application recognized with a Brandon Hall Gold Award.</li>
+            </ul>
+          </article>
+
+          <article class="role">
+            <div class="role-head">
+              <div>
+                <h3>Digital Marketing Intern</h3>
+                <div class="role-company">Digiqom</div>
+              </div>
+              <div class="role-date">Apr 2017 – Jun 2017</div>
+            </div>
+            <p>
+              Prepared client proposals and led a plan to make the company
+              website more intuitive, with stronger storytelling and impact.
+            </p>
+          </article>
+
+          <article class="role">
+            <div class="role-head">
+              <div>
+                <h3>Senior Mobile Application Developer</h3>
+                <div class="role-company">Blistering Solutions Pvt. Ltd. · Mumbai</div>
+              </div>
+              <div class="role-date">Jul 2014 – May 2016</div>
+            </div>
+            <p>
+              Designed and developed Android and iOS applications with
+              a focus on performance, responsiveness, and user-friendly experiences.
+            </p>
+            <ul>
+              <li>Developed and launched five mobile apps across social, gaming, and other client projects.</li>
+              <li>Promoted to Senior Mobile Application Developer.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="kicker">A little more about me</div>
+          <h2>Business-minded.<br>Technically grounded.</h2>
+        </div>
+        <p class="section-intro">
+          I enjoy translating ambiguous challenges into structured product
+          decisions, and partnering across teams to turn plans into outcomes.
+        </p>
+      </div>
+
+      <div class="two-col">
+        <article class="info-card">
+          <h3>Education</h3>
+
+          <div class="education-item">
+            <strong>PGDM, Marketing and Analytics</strong>
+            <span>T.A. Pai Management Institute · 2016–2018</span>
+          </div>
+
+          <div class="education-item">
+            <strong>B.Tech, Information Technology</strong>
+            <span>Vellore Institute of Technology · 2010–2014</span>
+          </div>
+
+          <h3 style="margin-top:25px">Certifications</h3>
+          <div class="chips">
+            <span class="chip">AWS Cloud Practitioner</span>
+            <span class="chip">Microsoft Azure Fundamentals</span>
+            <span class="chip">Titanium Certified Developer</span>
+            <span class="chip">IIBA–ECBA</span>
+          </div>
+        </article>
+
+        <article class="info-card">
+          <h3>Recognition & languages</h3>
+
+          <div class="award-list">
+            <div class="award">
+              <div class="award-mark" aria-hidden="true">🏆</div>
+              <div>
+                <strong>Inspire GEM Award · Accenture</strong>
+                <span>For excellent individual performance</span>
+              </div>
+            </div>
+
+            <div class="award">
+              <div class="award-mark" aria-hidden="true">⭐</div>
+              <div>
+                <strong>Pinnacle Award · Accenture</strong>
+                <span>For best team performance</span>
+              </div>
+            </div>
+
+            <div class="award">
+              <div class="award-mark" aria-hidden="true">🎓</div>
+              <div>
+                <strong>Academic distinction</strong>
+                <span>Graduated in the top 3 of 500 students; 9.3 CGPA in B.Tech.</span>
+              </div>
+            </div>
+
+            <div class="award">
+              <div class="award-mark" aria-hidden="true">📜</div>
+              <div>
+                <strong>Additional recognition</strong>
+                <span>Merit certificate, scholarship, and promotion to Team Lead.</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="height:20px"></div>
+          <h3>Languages</h3>
+          <div class="chips">
+            <span class="chip">English · Full professional</span>
+            <span class="chip">Hindi · Full professional</span>
+            <span class="chip">Indonesian · Limited working</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="contact-panel">
+        <div>
+          <div class="kicker">Have a product challenge?</div>
+          <h2>Let’s build something that makes a difference.</h2>
+          <p>
+            If you’re looking for a product leader who brings structured
+            thinking, technical fluency, and a focus on measurable outcomes,
+            I’d love to connect.
+          </p>
+        </div>
+
+        <div class="contact-actions">
+          <a class="button primary" href="mailto:richa6391@gmail.com">richa6391@gmail.com ↗</a>
+          <a class="button secondary" href="https://www.linkedin.com/in/richa-sharma-21376a76" target="_blank" rel="noreferrer">Connect on LinkedIn ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <span>© <span id="year">2026</span> Richa Sharma · Product Management</span>
+    <div class="footer-links">
+      <a href="#home">Back to top ↑</a>
+      <a href="mailto:richa6391@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/richa-sharma-21376a76" target="_blank" rel="noreferrer">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
